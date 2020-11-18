@@ -1,0 +1,38 @@
+set nocompatible   " Disable vi-compatibility
+
+filetype plugin on
+syntax on
+
+"colorscheme koehler
+colorscheme ron
+set guiheadroom=0
+set incsearch
+set hlsearch
+
+
+set showmode                    " always show what mode we're currently editing in
+set autoindent                  " always set autoindenting on
+set copyindent                  " copy the previous indentation on autoindenting
+" Use spaces instead of tabs
+set expandtab
+
+" Be smart when using tabs ;)
+set smarttab
+
+" 1 tab == 4 spaces
+set shiftwidth=4
+set tabstop=4
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
+
+set ai "Auto indent
+set si "Smart indent
+set wrap "Wrap lines
+
+set number                      " always show line numbers
+set relativenumber
+set ignorecase                  " ignore case when searching
+set smartcase                   " ignore case if search pattern is all lowercase,
+set mouse=a
