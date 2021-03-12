@@ -2,57 +2,59 @@
 using namespace std;
 
 typedef long long int ll;
-typedef vector<int> vi;
-typedef vector<ll> vll;
-typedef pair<int,int> ii;
-#define see(x)	cerr<<(#x)<<" => "<<x<<'\n';
-#define see2(x,y)	cerr<<(#x)<<" => "<<x<<'\t'<<(#y)<<' '<<y<<'\n';
+typedef std::vector<int> vi;
+typedef std::vector<ll> vll;
+typedef std::pair<int,int> ii;
+#define debg(x)	std::cerr<<(#x)<<" => "<<x<<'\n';
+#define debgg(x,y)	std::cerr<<(#x)<<" => "<<x<<'\t'<<(#y)<<' '<<y<<'\n';
 #define len(a) (int)(a).size()
 #define all(x) x.begin(),x.end()
-#define mod 10000007
-//#define mod 998244353
+const int mod = 10000'0000'7;
+//const int mod = 998244353;
 
-void printarr(int arr[], int n){
-    for(int i = 0; i < n; ++i)
-        cout<<arr[i]<<(i<n-1?' ':'\n');
+bool comp (int x, int y) {
+    return x > y;
 }
-template < typename T> void  printv(T &a){
-    for(auto it = a.begin(); it != a.end(); ++it)
-        cout<<*it<<' ';
-    cout<<'\n';
+void printarr (int arr[], int n) {
+    for(int i = 0; i < n; ++i)
+        std::cerr<<arr[i]<<(i<n-1?' ':'\n');
+}
+template < typename T> void  printv (T &a) {
+    for (auto it = a.begin(); it != a.end(); ++it)
+        std::cerr<<*it<<' ';
+    std::cerr<<'\n';
 }
     
 
+const int maxn = 200009;
 //int t[510][510];
 ll ans;
-int arr[300009];
+int arr[maxn];
 
-void solve()
+
+void solve ()
 {
     bool ok = false;
-    int n,m,k;  cin>>n;
-    for(int i = 0; i < n;++i){
-        cin>>arr[i];
+    int n,m,k,q;  std::cin>>n;
+    for (int i = 0; i < n;++i) {
+        std::cin>>arr[i];
     }
     ans = 0;
-
-    cout<<'\n';
+    std::cout<<(ok?"YES":"NO");
+    std::cout<<'\n';
 }
-void sol()
+void sol ()
 {
     //test
 }
-void fastio(){
-    ios_base::sync_with_stdio(false);
-    cin.tie(0);
-}
 
-int main()
+int main ()
 {
-    //fastio();
-    fastio();
-    int testcases;  cin>>testcases;
-    for(int t = 0; t < testcases; ++t)
+    std::ios_base::sync_with_stdio(false);
+    std::cin.tie(0);
+    int testcases = 1;  
+    std::cin>>testcases;
+    for (int t = 0; t < testcases; ++t)
         solve();
     return 0;
 }
