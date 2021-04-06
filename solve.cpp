@@ -67,8 +67,3 @@ int main ()
     return 0;
 }
 
-
-/*
-Tuesday 06 April 2021 05:17:23 PM IST
-     author:   __astrainL3gi0N
-*/
