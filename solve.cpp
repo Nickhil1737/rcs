@@ -3,67 +3,64 @@ using namespace std;
 
 typedef long long int ll;
 typedef std::vector<int> vi;
-typedef std::vector<ll> vll;
 typedef std::pair<int,int> ii;
+typedef std::vector<ii> vii;
+typedef std::vector<ll> vl;
+
+#define pb push_back
+#define mp make_pair
 #define debg(x)	std::cerr<<(#x)<<" => "<<x<<'\n';
 #define debgg(x,y)	std::cerr<<(#x)<<" => "<<x<<'\t'<<(#y)<<' '<<y<<'\n';
 #define len(a) (int)(a).size()
 #define all(x) x.begin(),x.end()
-const int mod = 1'0000'0000'7;
+const int mod = 1000000007;
 //const int mod = 998244353;
 
 bool comp (int x, int y) {
     return x > y;
 }
-void printarr (int arr[], int n) {
-    for(int i = 0; i < n; ++i)
-        std::cerr<<arr[i]<<(i<n-1?' ':'\n');
-}
 template < typename T> void  printv (T &a) {
     for (auto it = a.begin(); it != a.end(); ++it)
-        std::cerr<<*it<<' ';
-    std::cerr<<'\n';
+        cout<<*it<<' ';
+    cout<<'\n';
 }
-    
-
-const int maxn = 200009;
+int gint() {
+    int n;  cin>>n;
+    return n;
+}
 //int t[510][510];
 ll ans;
-int arr[maxn];
 
-
-void solve ()
-{
+void solve () {
+    map <int,int> freq;
+    set <int> hsh;
     ans = 0;
     bool ok = false;
-    int n,m,k,q;  std::cin>>n;
+    int n = gint();
+    vi arr(n);
     //string  s;  cin>>s;
     for (int i = 0; i < n;++i) {
-        std::cin>>arr[i];
+        arr[i] = gint();
     }
-    std::cout<<(ok?"YES":"NO");
-    std::cout<<'\n';
+
+    cout<<(ok?"Yes":"No");
+    cout<<'\n';
 }
-void sol ()
-{
+void sol () {
     //test
+    //cout << setprecision(15) << fixed;
 }
 
-int main ()
-{
+int main () {
     std::ios_base::sync_with_stdio(false);
-    std::cin.tie(0);
-    auto begin = std::chrono::high_resolution_clock::now();
+    std::cin.tie(nullptr);
 
-    //cout << setprecision(15) << fixed;
     int testcases = 1;  
-    std::cin>>testcases;
-    for (int t = 0; t < testcases; ++t)
+    testcases = gint();
+    for (int t = 0; t < testcases; ++t) {
+        //cout<<"Case #"<<t+1<<": ";
         solve();
+    }
 
-		auto end = std::chrono::high_resolution_clock::now();
-		cerr << setprecision(4) << fixed;
-	    cerr << "Execution time: " << std::chrono::duration_cast<std::chrono::duration<double>>(end - begin).count() << " seconds" << endl;
     return 0;
 }
-
