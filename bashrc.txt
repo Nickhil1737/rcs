@@ -96,8 +96,8 @@ alias free='free -m'                      # show sizes in MB
 alias np='nano -w PKGBUILD'
 alias more=less
 alias xci='xclip -o -sel clip > inp'
-alias xcc='cat solve.cpp | xclip -sel clip'
-alias xsol='g++ solve.cpp -o a'
+alias vcc='cat solve.cpp | xclip -sel clip'
+alias uvwb='g++ solve.cpp -o a'
 
 xhost +local:root > /dev/null 2>&1
 
@@ -140,8 +140,3 @@ ex ()
     echo "'$1' is not a valid file"
   fi
 }
-export WORKON_HOME=$HOME/.virtualenvs
-export VIRTUALENVWRAPPER_PYTHON=/usr/bin/python3
-export VIRTUALENVWRAPPER_VIRTUALENV_ARGS=' -p /usr/bin/python3 '
-export PROJECT_HOME=$HOME/Devel
-source /usr/bin/virtualenvwrapper.sh
