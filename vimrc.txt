@@ -8,8 +8,10 @@ colorscheme ron
 set guiheadroom=0
 set incsearch
 set hlsearch
+set clipboard=unnamed
 
-"nnoremap cpp :-1read FileLocation<CR> 
+nnoremap cpp :-1read /home/astrainlegion/code/codeforces/solve.cpp<CR>
+
 set showmode                    " always show what mode we're currently editing in
 set autoindent                  " always set autoindenting on
 set copyindent                  " copy the previous indentation on autoindenting
